@@ -17,8 +17,22 @@ class MainActivity : AppCompatActivity() {
         binding.btnHomepage.setOnClickListener {
             val uri = Uri.parse("http://naver.com")
             val intent = Intent(Intent.ACTION_VIEW, uri)
-
             startActivity(intent)
         }
+
+        binding.btnMap.setOnClickListener {
+            //val uri = Uri.parse("geo:36.145014,128.393047?z=17")
+            val uri = Uri.parse("geo:0,0?z=17&q=왜관역")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
+        binding.phone.setOnClickListener {
+            //val uri = Uri.parse("geo:36.145014,128.393047?z=17")
+            val uri = Uri.parse("sms:010-3425-7339")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
     }
 }
